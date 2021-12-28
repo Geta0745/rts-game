@@ -14,7 +14,7 @@ public class UnitMovement : MonoBehaviour
     }
 
     private void Update() {
-        if(Input.GetMouseButtonDown(0)){
+        if(Input.GetMouseButtonDown(0) && !Input.GetKey(KeyCode.LeftShift)){
             RaycastHit hit;
             Ray ray = myCam.ScreenPointToRay(Input.mousePosition);
             if(Physics.Raycast(ray,out hit,Mathf.Infinity,ground)){
